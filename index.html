@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/v5/echarts-wordcloud.min.js"></script>
+
+    
+</head>
+<body >
+            <style>
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 12px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .chart-container {
+            display: block;
+        }
+
+        .chart-container:nth-child(n+2) {
+            display: none;
+        }
+    </style>
+    <div class="tab">
+            <button class="tablinks" onclick="showChart(event, '6315d44dcfa64e19ac2de096138dffab')">Low</button>
+            <button class="tablinks" onclick="showChart(event, 'c6ae7304a04d489c8d5d6c1dde908058')">Mid</button>
+            <button class="tablinks" onclick="showChart(event, '9218a703fadd4ce19e9365a9de85a9db')">High</button>
+    </div>
+
+    <div class="box">
+                <div id="6315d44dcfa64e19ac2de096138dffab" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('6315d44dcfa64e19ac2de096138dffab').style.width = document.getElementById('6315d44dcfa64e19ac2de096138dffab').parentNode.clientWidth + 'px';
+        var chart_6315d44dcfa64e19ac2de096138dffab = echarts.init(
+            document.getElementById('6315d44dcfa64e19ac2de096138dffab'), 'white', {renderer: 'canvas'});
+        var option_6315d44dcfa64e19ac2de096138dffab = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "shape": "circle",
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                30,
+                150
+            ],
+            "data": [
+                {
+                    "name": "Classical",
+                    "value": 9,
+                    "textStyle": {
+                        "color": "rgb(78,18,9)"
+                    }
+                },
+                {
+                    "name": "Country",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(112,137,76)"
+                    }
+                },
+                {
+                    "name": "EDM",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(10,158,156)"
+                    }
+                },
+                {
+                    "name": "Folk",
+                    "value": 2,
+                    "textStyle": {
+                        "color": "rgb(51,150,80)"
+                    }
+                },
+                {
+                    "name": "Gospel",
+                    "value": 1,
+                    "textStyle": {
+                        "color": "rgb(125,117,11)"
+                    }
+                },
+                {
+                    "name": "Hip hop",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(125,52,1)"
+                    }
+                },
+                {
+                    "name": "Jazz",
+                    "value": 2,
+                    "textStyle": {
+                        "color": "rgb(153,115,63)"
+                    }
+                },
+                {
+                    "name": "K pop",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(99,143,65)"
+                    }
+                },
+                {
+                    "name": "Lofi",
+                    "value": 0,
+                    "textStyle": {
+                        "color": "rgb(60,41,2)"
+                    }
+                },
+                {
+                    "name": "Metal",
+                    "value": 11,
+                    "textStyle": {
+                        "color": "rgb(85,46,30)"
+                    }
+                },
+                {
+                    "name": "Pop",
+                    "value": 17,
+                    "textStyle": {
+                        "color": "rgb(107,33,80)"
+                    }
+                },
+                {
+                    "name": "R&B",
+                    "value": 8,
+                    "textStyle": {
+                        "color": "rgb(131,146,21)"
+                    }
+                },
+                {
+                    "name": "Rap",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(83,119,79)"
+                    }
+                },
+                {
+                    "name": "Rock",
+                    "value": 22,
+                    "textStyle": {
+                        "color": "rgb(73,62,24)"
+                    }
+                },
+                {
+                    "name": "Video game music",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(136,110,115)"
+                    }
+                }
+            ],
+            "drawOutOfBound": false,
+            "textStyle": {
+                "emphasis": {}
+            },
+            "label": {
+                "show": true,
+                "color": null,
+                "margin": 8,
+                "formatter": "{b}"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "WordCloud for different mental health groups (%)",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 1,
+        "max": 33,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "vertical",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_6315d44dcfa64e19ac2de096138dffab.setOption(option_6315d44dcfa64e19ac2de096138dffab);
+    </script>
+                <div id="c6ae7304a04d489c8d5d6c1dde908058" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('c6ae7304a04d489c8d5d6c1dde908058').style.width = document.getElementById('c6ae7304a04d489c8d5d6c1dde908058').parentNode.clientWidth + 'px';
+        var chart_c6ae7304a04d489c8d5d6c1dde908058 = echarts.init(
+            document.getElementById('c6ae7304a04d489c8d5d6c1dde908058'), 'white', {renderer: 'canvas'});
+        var option_c6ae7304a04d489c8d5d6c1dde908058 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "shape": "circle",
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                30,
+                150
+            ],
+            "data": [
+                {
+                    "name": "Classical",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(122,37,117)"
+                    }
+                },
+                {
+                    "name": "Country",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(22,41,47)"
+                    }
+                },
+                {
+                    "name": "EDM",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(150,46,121)"
+                    }
+                },
+                {
+                    "name": "Folk",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(115,31,87)"
+                    }
+                },
+                {
+                    "name": "Gospel",
+                    "value": 1,
+                    "textStyle": {
+                        "color": "rgb(10,16,119)"
+                    }
+                },
+                {
+                    "name": "Hip hop",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(126,105,141)"
+                    }
+                },
+                {
+                    "name": "Jazz",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(118,37,14)"
+                    }
+                },
+                {
+                    "name": "K pop",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(95,159,50)"
+                    }
+                },
+                {
+                    "name": "Latin",
+                    "value": 1,
+                    "textStyle": {
+                        "color": "rgb(61,104,65)"
+                    }
+                },
+                {
+                    "name": "Lofi",
+                    "value": 1,
+                    "textStyle": {
+                        "color": "rgb(44,62,150)"
+                    }
+                },
+                {
+                    "name": "Metal",
+                    "value": 13,
+                    "textStyle": {
+                        "color": "rgb(68,118,143)"
+                    }
+                },
+                {
+                    "name": "Pop",
+                    "value": 16,
+                    "textStyle": {
+                        "color": "rgb(93,25,135)"
+                    }
+                },
+                {
+                    "name": "R&B",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(43,0,79)"
+                    }
+                },
+                {
+                    "name": "Rap",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(81,36,136)"
+                    }
+                },
+                {
+                    "name": "Rock",
+                    "value": 25,
+                    "textStyle": {
+                        "color": "rgb(120,91,78)"
+                    }
+                },
+                {
+                    "name": "Video game music",
+                    "value": 5,
+                    "textStyle": {
+                        "color": "rgb(1,65,57)"
+                    }
+                }
+            ],
+            "drawOutOfBound": false,
+            "textStyle": {
+                "emphasis": {}
+            },
+            "label": {
+                "show": true,
+                "color": null,
+                "margin": 8,
+                "formatter": "{b}"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "WordCloud for different mental health groups (%)",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 1,
+        "max": 33,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "vertical",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_c6ae7304a04d489c8d5d6c1dde908058.setOption(option_c6ae7304a04d489c8d5d6c1dde908058);
+    </script>
+                <div id="9218a703fadd4ce19e9365a9de85a9db" class="chart-container" style="width:900px; height:500px; "></div>
+    <script>
+            document.getElementById('9218a703fadd4ce19e9365a9de85a9db').style.width = document.getElementById('9218a703fadd4ce19e9365a9de85a9db').parentNode.clientWidth + 'px';
+        var chart_9218a703fadd4ce19e9365a9de85a9db = echarts.init(
+            document.getElementById('9218a703fadd4ce19e9365a9de85a9db'), 'white', {renderer: 'canvas'});
+        var option_9218a703fadd4ce19e9365a9de85a9db = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "aria": {
+        "enabled": false
+    },
+    "color": [
+        "#5470c6",
+        "#91cc75",
+        "#fac858",
+        "#ee6666",
+        "#73c0de",
+        "#3ba272",
+        "#fc8452",
+        "#9a60b4",
+        "#ea7ccc"
+    ],
+    "series": [
+        {
+            "type": "wordCloud",
+            "shape": "circle",
+            "rotationRange": [
+                -90,
+                90
+            ],
+            "rotationStep": 45,
+            "girdSize": 20,
+            "sizeRange": [
+                30,
+                150
+            ],
+            "data": [
+                {
+                    "name": "Classical",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(12,67,97)"
+                    }
+                },
+                {
+                    "name": "Country",
+                    "value": 1,
+                    "textStyle": {
+                        "color": "rgb(25,97,160)"
+                    }
+                },
+                {
+                    "name": "EDM",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(156,114,106)"
+                    }
+                },
+                {
+                    "name": "Folk",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(53,140,141)"
+                    }
+                },
+                {
+                    "name": "Gospel",
+                    "value": 1,
+                    "textStyle": {
+                        "color": "rgb(47,113,96)"
+                    }
+                },
+                {
+                    "name": "Hip hop",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(140,131,49)"
+                    }
+                },
+                {
+                    "name": "Jazz",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(7,5,59)"
+                    }
+                },
+                {
+                    "name": "K pop",
+                    "value": 2,
+                    "textStyle": {
+                        "color": "rgb(59,93,17)"
+                    }
+                },
+                {
+                    "name": "Lofi",
+                    "value": 3,
+                    "textStyle": {
+                        "color": "rgb(4,129,33)"
+                    }
+                },
+                {
+                    "name": "Metal",
+                    "value": 13,
+                    "textStyle": {
+                        "color": "rgb(65,47,67)"
+                    }
+                },
+                {
+                    "name": "Pop",
+                    "value": 14,
+                    "textStyle": {
+                        "color": "rgb(7,94,9)"
+                    }
+                },
+                {
+                    "name": "R&B",
+                    "value": 4,
+                    "textStyle": {
+                        "color": "rgb(59,114,76)"
+                    }
+                },
+                {
+                    "name": "Rap",
+                    "value": 2,
+                    "textStyle": {
+                        "color": "rgb(129,85,101)"
+                    }
+                },
+                {
+                    "name": "Rock",
+                    "value": 33,
+                    "textStyle": {
+                        "color": "rgb(83,112,19)"
+                    }
+                },
+                {
+                    "name": "Video game music",
+                    "value": 6,
+                    "textStyle": {
+                        "color": "rgb(125,68,67)"
+                    }
+                }
+            ],
+            "drawOutOfBound": false,
+            "textStyle": {
+                "emphasis": {}
+            },
+            "label": {
+                "show": true,
+                "color": null,
+                "margin": 8,
+                "formatter": "{b}"
+            },
+            "rippleEffect": {
+                "show": true,
+                "brushType": "stroke",
+                "scale": 2.5,
+                "period": 4
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [],
+            "selected": {},
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14,
+            "backgroundColor": "transparent",
+            "borderColor": "#ccc",
+            "borderWidth": 1,
+            "borderRadius": 0,
+            "pageButtonItemGap": 5,
+            "pageButtonPosition": "end",
+            "pageFormatter": "{current}/{total}",
+            "pageIconColor": "#2f4554",
+            "pageIconInactiveColor": "#aaa",
+            "pageIconSize": 15,
+            "animationDurationUpdate": 800,
+            "selector": false,
+            "selectorPosition": "auto",
+            "selectorItemGap": 7,
+            "selectorButtonGap": 10
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "showContent": true,
+        "alwaysShowContent": false,
+        "showDelay": 0,
+        "hideDelay": 100,
+        "enterable": false,
+        "confine": false,
+        "appendToBody": false,
+        "transitionDuration": 0.4,
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0,
+        "padding": 5,
+        "order": "seriesAsc"
+    },
+    "title": [
+        {
+            "show": true,
+            "text": "WordCloud for different mental health groups (%)",
+            "target": "blank",
+            "subtarget": "blank",
+            "padding": 5,
+            "itemGap": 10,
+            "textAlign": "auto",
+            "textVerticalAlign": "auto",
+            "triggerEvent": false
+        }
+    ],
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 1,
+        "max": 33,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "hoverLink": true,
+        "orient": "vertical",
+        "padding": 5,
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_9218a703fadd4ce19e9365a9de85a9db.setOption(option_9218a703fadd4ce19e9365a9de85a9db);
+    </script>
+    </div>
+
+    <script>
+    </script>
+    <script>
+        (function() {
+            containers = document.getElementsByClassName("chart-container");
+            if(containers.length > 0) {
+                containers[0].style.display = "block";
+            }
+        })()
+
+        function showChart(evt, chartID) {
+            let containers = document.getElementsByClassName("chart-container");
+            for (let i = 0; i < containers.length; i++) {
+                containers[i].style.display = "none";
+            }
+
+            let tablinks = document.getElementsByClassName("tablinks");
+            for (let i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = "tablinks";
+            }
+
+            document.getElementById(chartID).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</body>
+</html>
